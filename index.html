@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="Main.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <title>Merry X-mas!</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oY8NNBVmoaM?rel=0&amp;controls=0&amp;showinfo=0&amp;start=10&amp;autoplay=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <div class="col-sm-12">
+
+            <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <p style="text-align: center; font-size: 40px; margin-bottom: 15%;">Turn the card over!</p>
+                        <img src="5841b969a6515b1e0ad75a93.png"/>
+
+
+                    </div>
+                    <div class="back face center">
+                        <img src="img/animated-santa-claus-image-0420.gif">
+                        <h2 style="font-weight: 600;">May you have
+                            the spirit of Christmas
+                            which is Peace,
+                            the gladness of Christmas
+                            which is Hope,
+                            and the Heart of Christmas
+                            which is Love.<br>
+                            Merry Christmas!
+                        </h2>
+                        <div id="slider"></div>
+                        <p>klik op het plaatje om verder te gaan.</p>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div><!-- row -->
+</div><!-- content container -->
+<p> R.deKogel</p>
+<script>
+    var plaatjes = [1,2,3,4,5];
+    var teller =0;
+    var slideholder = document.getElementById("slider");
+    slideholder.style.backgroundImage = "url('img1.jpg')";
+
+    slideholder.addEventListener("click", function() {
+        getImg();
+        slideholder.style.backgroundImage = "url('img" + getImg() + ".jpg')";
+    });
+
+    function getImg() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else  {
+            teller++;
+        }
+
+
+        return(teller);
+
+    }
+</script>
+<script src="sneeuw.js"></script>
+<script src="jquery.slim.min.js"></script>
+<script src="tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
